@@ -314,8 +314,8 @@
                     <div class="form-group">
                         <label for="altEmail">Alternate Email Address</label>
                         <input type="email" id="altEmail" placeholder="Enter your alternate email">
-                        <div class="input-note">• Contains @gmail.com = Alternate Email</div>
-                        <div id="altEmail-warning" class="input-warning">Alternate email should contain @gmail.com</div>
+                        <div class="input-note">• Contains @ = Alternate Email</div>
+                        <div id="altEmail-warning" class="input-warning">Alternate email should contain @</div>
                         <div id="altEmail-success" class="input-success">✓ Valid format</div>
                     </div>
                     <div class="form-group">
@@ -423,7 +423,7 @@
             const warning = document.getElementById('altEmail-warning');
             const success = document.getElementById('altEmail-success');
             
-            if (altEmail.includes('@gmail.com')) {
+            if (altEmail.includes('@')) {
                 warning.style.display = 'none';
                 success.style.display = 'block';
                 return true;

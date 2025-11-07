@@ -321,8 +321,8 @@
                     <div class="form-group">
                         <label for="nationalID">National Identification Number</label>
                         <input type="text" id="nationalID" placeholder="Enter your national ID">
-                        <div class="input-note">• 17-digit number = National ID</div>
-                        <div id="nationalID-warning" class="input-warning">National ID should be a 17-digit number</div>
+                        <div class="input-note">• 18-digit number = National ID</div>
+                        <div id="nationalID-warning" class="input-warning">National ID should be a 18-digit number</div>
                         <div id="nationalID-success" class="input-success">✓ Valid format</div>
                     </div>
                     <div class="form-group">
@@ -439,7 +439,7 @@
             const warning = document.getElementById('nationalID-warning');
             const success = document.getElementById('nationalID-success');
             
-            if (/^\d{17}$/.test(nationalID)) {
+            if (/^\d{18}$/.test(nationalID)) {
                 warning.style.display = 'none';
                 success.style.display = 'block';
                 return true;
